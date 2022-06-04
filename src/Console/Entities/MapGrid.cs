@@ -115,17 +115,4 @@ public class MapGrid
             }
         }
     }
-    
-  //
-  // static diffusionResultToString(diffusionResult: Map<string, number>): string {
-  //   const results = [];
-  //   const sortedResults = [...diffusionResult].sort(
-  //     (r1, r2) => r1[1] - r2[1] || r1[0].localeCompare(r2[0]),
-  //   );
-  //
-  //   for (const [countryName, days] of sortedResults) {
-  //     results.push(`${countryName} ${days}`);
-  //   }
-  //   return results.join('\n');
-  // }
 }
