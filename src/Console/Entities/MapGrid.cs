@@ -16,10 +16,10 @@ public class MapGrid
 
         foreach (var country in countries)
         {
-            minX = Math.Min(minX, country.Coordinates.xl);
-            minY = Math.Min(minY, country.Coordinates.yl);
-            maxX = Math.Max(maxX, country.Coordinates.xh);
-            maxY = Math.Max(maxY, country.Coordinates.yh);
+            minX = Math.Min(minX, country.Coordinates.Xl);
+            minY = Math.Min(minY, country.Coordinates.Yl);
+            maxX = Math.Max(maxX, country.Coordinates.Xh);
+            maxY = Math.Max(maxY, country.Coordinates.Yh);
         }
 
         AddCitiesToCountries();
