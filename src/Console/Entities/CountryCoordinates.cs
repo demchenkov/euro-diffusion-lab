@@ -3,7 +3,7 @@
 public class CountryCoordinates
 {
     private const int MinCoordinate = 1;
-    private const int MaxCoordinate = 1;
+    private const int MaxCoordinate = 10;
     private const int CoordinatesCount = 4;
     
     public CountryCoordinates(int xl, int yl, int xh, int yh)
