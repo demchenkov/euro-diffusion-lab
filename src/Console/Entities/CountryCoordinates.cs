@@ -32,6 +32,14 @@ public class CountryCoordinates
 
         return new CountryCoordinates(coords[0], coords[1], coords[2], coords[3]);
     }
+    
+    public static CountryCoordinates FromArray(params int[] coordinates)
+    {
+        if (coordinates.Length != CoordinatesCount) 
+            throw new ArgumentException($"Incorrect count of coordinates: {coordinates.Length}");
+
+        return new CountryCoordinates(coordinates[0], coordinates[1], coordinates[2], coordinates[3]);
+    }
 
     private static bool AreCoordinatesValid(int xl, int yl, int xh, int yh)
     {

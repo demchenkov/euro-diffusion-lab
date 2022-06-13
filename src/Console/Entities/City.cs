@@ -7,9 +7,9 @@ public class City
     
     private readonly string[] _coinTypes;
     private readonly List<City> _neighbors;
-    private readonly double[] _coins;
-    private readonly double[] _cache;
-    private readonly double _representativePortion;
+    private readonly int[] _coins;
+    private readonly int[] _cache;
+    private readonly int _representativePortion;
 
     public City(
         IEnumerable<string> coinTypes,
@@ -21,8 +21,8 @@ public class City
         _coinTypes = coinTypes.ToArray();
         _neighbors = new List<City>();
 
-        _coins = new double[_coinTypes.Length];
-        _cache = new double[_coinTypes.Length];
+        _coins = new int[_coinTypes.Length];
+        _cache = new int[_coinTypes.Length];
         
         _representativePortion = representativePortion;
 
@@ -42,7 +42,7 @@ public class City
         for (int i = 0; i < _coins.Length; i++)
         {
             var coinCount = _coins[i];
-            var share = Math.Floor(coinCount / _representativePortion);
+            var share = (int)Math.Floor((double)coinCount / _representativePortion);
 
             foreach (var neighbor in _neighbors)
             {
