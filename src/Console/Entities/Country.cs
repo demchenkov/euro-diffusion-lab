@@ -7,7 +7,8 @@ public class Country
     private readonly List<City> _cities;
 
     
-    public Country(string name, CountryCoordinates coordinates) {
+    public Country(string name, CountryCoordinates coordinates) 
+    {
         if (name.Length > MaxNameLength) 
             throw new ArgumentException($"Name must be less than {MaxNameLength} characters");
 

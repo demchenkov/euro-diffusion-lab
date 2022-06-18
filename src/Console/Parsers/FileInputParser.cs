@@ -16,7 +16,8 @@ public static class FileInputParser
 
         var countryStrings = new List<List<string>>();
         var lineIndex = 0;
-        while (lineIndex < lines.Length - 2) {
+        while (lineIndex < lines.Length - 2) 
+        {
             var currentLine = lines[lineIndex];
             var parsed = int.TryParse(currentLine, out var countryNumber);
 
@@ -29,7 +30,8 @@ public static class FileInputParser
                 var countryLineIndex = lineIndex;
                 countryLineIndex < countryNumber + lineIndex;
                 countryLineIndex++
-            ) {
+            ) 
+            {
                 countries.Add(lines[countryLineIndex]);
             }
             lineIndex += countryNumber; // move to next number of countries

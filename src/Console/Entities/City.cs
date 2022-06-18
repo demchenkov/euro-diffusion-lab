@@ -16,7 +16,8 @@ public class City
         Country country,
         int initialCoinsCount = InitialCoinsCount,
         int representativePortion = RepresentativePortion
-    ) {
+    ) 
+    {
         Country = country;
         _coinTypes = coinTypes.ToArray();
         _neighbors = new List<City>();
@@ -41,8 +42,7 @@ public class City
     {
         for (int i = 0; i < _coins.Length; i++)
         {
-            var coinCount = _coins[i];
-            var share = (int)Math.Floor((double)coinCount / _representativePortion);
+            var share = (int)Math.Floor((double)_coins[i] / _representativePortion);
 
             foreach (var neighbor in _neighbors)
             {
@@ -54,7 +54,8 @@ public class City
 
     public void UpdateCoins() 
     {
-        for (int index = 0; index < _coinTypes.Length; index++) {
+        for (int index = 0; index < _coinTypes.Length; index++) 
+        {
             _coins[index] += _cache[index];
             _cache[index] = 0;
         }

@@ -40,7 +40,8 @@ public class MapGrid
             {
                 city.TransportCoinsToNeighbors();
 
-                if (city.Country.IsCalculationFinished && !result.ContainsKey(city.CountryName)) {
+                if (city.Country.IsCalculationFinished && !result.ContainsKey(city.CountryName))
+                {
                     result[city.CountryName] = currentDay;
                 }
             }
@@ -53,7 +54,8 @@ public class MapGrid
 
         foreach (var country in countries)
         {
-            if (!result.ContainsKey(country.Name)) {
+            if (!result.ContainsKey(country.Name))
+            {
                 result[country.Name] = currentDay;
             }
         }
@@ -102,10 +104,12 @@ public class MapGrid
             {
                 city.TryAddNeighbor(countriesGrid[x - 1, y]);
             }
-            if (y < this.maxY) {
+            if (y < this.maxY) 
+            {
                 city.TryAddNeighbor(countriesGrid[x, y + 1]);
             }
-            if (y > this.minY) {
+            if (y > this.minY) 
+            {
                 city.TryAddNeighbor(countriesGrid[x, y - 1]);
             }
           
